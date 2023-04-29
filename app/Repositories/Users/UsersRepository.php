@@ -2,6 +2,7 @@
 
 namespace App\Repositories\Users;
 
+use Exception;
 use Illuminate\Support\Facades\Http;
 
 class UsersRepository
@@ -14,20 +15,31 @@ class UsersRepository
 
     public function all(int $page=1, int $per_page=20): array
     {
-        return Http::withHeaders($this->header)
-            ->get("https://gorest.co.in/public/v2/users?page={$page}&per_page={$per_page}")->json();
+        try{
+            return Http::withHeaders($this->header)
+                ->get("https://gorest.co.in/public/v2/users?page={$page}&per_page={$per_page}")->json();
+        }catch(Exception $e){
+            return [];
+        }
+        
     }
 
     public function addUser(array $data)
     {
         return Http::withHeaders($this->header)
             ->post('https://gorest.co.in/public/v2/users', $data);
+
     }
 
     public function findUserById(int $id): array
     {
-        return Http::withHeaders($this->header)
-            ->get("https://gorest.co.in/public/v2/users/{$id}")->json(); 
+        try{
+            return Http::withHeaders($this->header)
+                ->get("https://gorest.co.in/public/v2/users/{$id}")->json(); 
+        }catch(Exception $e){
+            return [];
+        }
+        
     }
 
     public function updateUser(array $data, int $id)
