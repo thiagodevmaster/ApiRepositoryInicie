@@ -1,0 +1,12 @@
+Customer (Tests\Feature\Customer)
+ [x] Only logged in users can see customers list
+ [x] Only logged in users can access customer creation
+ [x] Only logged in users can search for clients
+ [x] Only logged in users can edit clients
+ [x] Only logged in users can remove clients
+ [x] Only logged in users can see list of posts
+ [x] Only logged in users can create a post
+
+User System (Tests\Unit\UserSystem)
+ [x] Check if users columns is correct
+
