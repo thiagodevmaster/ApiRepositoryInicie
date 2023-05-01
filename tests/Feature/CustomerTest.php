@@ -48,4 +48,16 @@ class CustomerTest extends TestCase
     {
         $this->get('/posts/create/1268635')->assertRedirect('login');
     }
+
+    /** @test */
+    public function only_logged_in_users_can_create_a_comments()
+    {
+        $this->post('/posts/comments/1268635')->assertRedirect('login');
+    }
+
+    /** @test */
+    public function only_logged_in_users_can_delete_of_comments()
+    {
+        $this->delete('/posts/comments/1268635')->assertRedirect('login');
+    }
 }
