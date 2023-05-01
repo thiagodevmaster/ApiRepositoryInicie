@@ -55,6 +55,108 @@
 ![Screenshot of a comment on a GitHub issue showing an image, added in the Markdown, of an Octocat smiling and raising a tentacle.](https://media.giphy.com/media/l0IyjiXOXTX6Yemsg/giphy.gif)
 
 </div>
+<br>
+<br>
+<br>
+
+<ul>
+    <li>PHP 8.1.2</li>
+    <li>Ubuntu 20.11</li>
+    <li>Laravel 10</li>
+    <li>Docker Desktop 4.18.0 </li>
+</ul>
+<br>
+
+## Primeiramente clone o projeto para seu ambiente de desenvolvimento desta forma:
+<br>
+
+```
+git clone https://github.com/thiagodevmaster/ApiRepositoryInicie.git
+```
+<br>
+
+## Logo em seguida execute o comando:
+### para poder resolver e instalar todas as dependências do projeto
+<br>
+
+```
+composer install
+```
+<br>
+
+## # Antes de iniciar o projeto é necessário inserir sua chave de autenticação para acessar a API. Crie na pasta do projeto um arquivo chamado .env . Em seguida vá no arquivo chamado .env-example, copie todo o conteúdo do arquivo e cole no arquivo criado chamado .env
+<br>
+
+## Em seguida insira sua chave de acesso na constante chamada ( API_KEY ) .
+<br>
+<hr>
+
+<br>
+
+## Este projeto utiliza o sail do Laravel para rodar em um ambiente docker, então pode-se utilizar o comando no seu terminal:
+<br>
+
+```
+alias sail='[ -f sail ] && sh sail || sh vendor/bin/sail'
+
+sail up
+``` 
+
+<br>
+
+## isso subirá os serviços necessários utilizados pelo arquivo ( docker-compose.yml ) para o projeto funcionar corretamente.
+
+<br>
+<hr>
+<br>
+
+## Também podem ser feitos testes com a utilização do PHP Unit rodando simplesmente o seguinte código no terminal:
+<br>
+
+```
+sail php artisan test
+
+ou
+
+php artisan test
+```
+<br>
+
+## Isto gera um arquivo chamado ( Testes-Executados.txt ), localizado na pasta raiz do projeto.
+
+<br>
+<hr>
+<br>
+
+## Utilizando um banco de dados simples, no nosso caso o SQLite3 temos um usuário já criado para acessar o sistema:
+<br>
+
+### Email: <strong>admin@admin.com</strong>
+### Senha: <strong>admin</strong>
+<br>
+
+## Então é só abrir o browser e digitar localhost que você será redirecionado para a área de login. Após efetuar o login, você terá acesso ao sistema do forma que poderá: 
+
+<ul>
+    <li><strong>visualizar a lista de clientes contidos na api</strong></li>
+    <li><strong>Criar clientes dentro da api</strong></li>
+    <li><strong>Editar clientes dentro da api</strong></li>
+    <li><strong>Deletar clientes dentro da api</strong></li>
+    <li><strong>Criar posts de clientes dentro da api</strong></li>
+    <li><strong>Criar comentários dentro de posts de clientes da api</strong></li>
+    <li><strong>Deletar comentários dentro de posts de clientes da api</strong></li>
+    <li><strong>Recuperar id de clientes criados</strong></li>
+    <li><strong>Fazer logout do sistema</strong></li>
+
+</ul>
+
+<br>
+
+## Qualquer dúvida e entrar em contato:
+
+<h3>Email: <strong>thiagodantas.dev@gmail.com</strong></h3>
+
+
 
 
 
